@@ -1,0 +1,66 @@
+Assignment-1
+~~~~~~~~~~~~~
+1. What are the popup boxes in javascript?
+
+In Javascript, popup boxes are used to display the message or notification to the user.
+JavaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box.
+
+2. What is JavaScript engine for Safari?
+
+Safari uses Apple's open-source browser engine WebKit.
+
+3.  Test the following requirement using JavaScript
+
+		a.  Create two separate *.js files (Names :  ClientScripts1.js, ClientScripts2.js)
+		b.  Write some messages using alert() .  Message should contains the file name
+		c.   Import the above js files in other *.html document and observe.
+		
+4.   Do some changes and observe	
+		a.  Give some wrong file name while import and observe the messages in console window
+			It will give error 404 (not found).
+		
+		b.  Is  Filename case sensitive check practically?
+			It is not Case-sensitive		
+		
+5.  What are the key differences between Java and JavaScript?
+
+Java is a statically typed, object-oriented programming language for building platform-independent applications. JavaScript is a dynamically typed scripting language primarily used for interactive web development. Despite similar names, they serve different purposes and have distinct syntax, runtime environments, and use cases.
+-------------------------------------------------------------------------------------------------
+
+
+Assignment-2
+~~~~~~~~~~~~
+1. Is it possible to disable JavaScript in browser?  If yes, How to disable javascript in browser?
+
+Yes,we can. Open an internet browser. Click on the icon intended for either the control panel or settings. Look into advanced options for privacy and security. Locate the JavaScript module and toggle the switch off in case of chrome it will be V8.
+
+2. What is the difference between undefined and not defined in JavaScript?
+
+The primary distinction between undefined and not defined is: A variable that has been declared but not assigned a value is undefined . A variable that has not been declared at all is not defined .
+
+3. Difference between ==  and ===?
+
+== is used for checking value, it will give true for both,
+	10==10
+	10=="10"
+
+=== it is used for checking both data type and value,
+	10==10		True
+	10=="10"  	False
+
+4. What does the isNaN() function?
+
+	it is use to check whether a variable has valid value or not.
+
+5. Difference between Client side JavaScript and Server side JavaScript?
+
+server-side and client-side refer to the location where certain tasks or processes are carried out in a web application. Server-side processes are executed on the web server, while client-side processes are executed on the user's device.
+
+6. Practical :  Write a JavaScript code to display Employee details as follows in console window: 
+				Empno : 12645,  Ename  :  Scott,  Job : Manager, Salary :  45000
+
+	
+
+----------------------------------------------------------------------------------------------
+
+
