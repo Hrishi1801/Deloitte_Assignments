@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <fieldset>
+        <legend>Product Detail</legend>
+        First Number : <input type="number" id="n1" />
+        <br /><br />
+        Second Number : <input type="number" id="n2" />
+        <br /><br />
+
+        <br /><br />
+        <input type="button" id="Add" onclick="buttonClick(event)" value="Add" />
+        <input type="button" id="Sub" onclick="buttonClick(event)" value="Sub" />
+        <input type="button" id="Mul" onclick="buttonClick(event)" value="Multiply" />
+    
+        <p id="p1"></p>
+    </fieldset>
+  
+
+    <script>
+
+        function buttonClick() {
+            let cal= event.target.id;
+            
+            var txtObj1 = document.getElementById("n1");
+            var txtObj2 = document.getElementById("n2");
+            var paraObj = document.getElementById("p1");
+
+            var a= Number(txtObj1.value);
+            var b= Number(txtObj2.value);
+            var c=0;
+            console.log(cal);
+
+        if(cal=="Add")
+        {
+            c=a+b;
+            paraObj.textContent = `Result is ${c}`;
+        }
+        else if(cal=="Sub")
+        {
+            c=a-b;
+            paraObj.textContent = `Result is ${c}`;
+        }
+        else if(cal=="Mul")
+        {
+            c=a*b;
+            paraObj.textContent = `Result is ${c}`;
+        }
+
+    }
+
+    
+
+    </script>
+
+</body>
+
+</html>

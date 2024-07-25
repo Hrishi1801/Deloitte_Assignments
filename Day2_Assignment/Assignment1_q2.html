@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <fieldset>
+        <legend>Product Detail</legend>
+        Product Name : <input type="text" id="t1" />
+        <br /><br />
+        Unit Price : <input type="number" id="t2" />
+        <br /><br />
+        Quantity : <input type="number" id="t3" />
+
+        <br /><br />
+        <input type="button" onclick="buttonClick()" value="Calculate" />
+    
+        <p id="p1"></p>
+    </fieldset>
+  
+
+    <script>
+
+        function buttonClick() {
+            if(confirm("Do you want to continue?") ==true){
+            
+            var txtObj1 = document.getElementById("t1");
+            var txtObj2 = document.getElementById("t2");
+            var txtObj3 = document.getElementById("t3");
+            var paraObj = document.getElementById("p1");       
+            
+            
+            var  pd = txtObj1.value;
+			var  u  = Number(txtObj2.value);
+            var  q  = Number(txtObj3.value);
+
+            var sum=0;
+            
+			if(q>10 && q<=20)
+			{
+                let d= q*u*10/100
+				sum= (q*u)-d
+			}
+			else if(q>20 && q<=30)
+			{   
+                let d= q*u*15/100
+				sum= (q*u)-d
+
+			}
+            else if(q>30)
+            {
+                let d= q*u*20/100
+				sum= (q*u)-d
+            }
+            else
+            {
+                sum= q*u
+            }
+
+            console.log(sum);
+            paraObj.textContent = `sum is ${sum}`;
+        }
+    }
+
+    
+
+    </script>
+
+</body>
+
+</html>
