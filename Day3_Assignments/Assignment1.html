@@ -1,0 +1,83 @@
+<html>
+	<head></head>
+	<body>
+		<h3>Assignment</h3>
+		<hr/>
+
+        <p id="p1"></p>
+
+
+        <div class="wrapper">
+            <label for="">Number: </label>
+            <input type="number" id="x" required placeholder="Enter Number"> <br><br>
+            <label for="">Power: </label>
+            <input type="number" id="y" required placeholder="Enter Power"><br><br>
+            <button onclick="clickbutton()">result</button>
+        </div>
+        <div id="result"></div>
+        <br>
+
+        <label for="">Enter String: </label><br>
+        <input type="text" id="s" required placeholder="Enter String"><br><br>
+        <button onclick="Count()">Count</button><br>
+        <p id="c"></p>
+
+	  
+		<script>
+        var t=0; 
+		function  evennumbers(n)
+		{
+                if(n%2==0){
+                     t++;
+                }
+		}
+		
+		let  arr = [1,2,3,4,5,10,8];
+		console.log(arr);
+
+
+		arr.map(evennumbers);
+        console.log(t);
+
+        var paraObj = document.getElementById("p1");
+		paraObj.innerHTML  = "Number of even numbers: "+ t;
+
+        function clickbutton() {
+            let x = Number(document.getElementById("x").value);
+            let y = Number(document.getElementById("y").value);
+            let result = Result(x,y);
+             document.getElementById("result").textContent = `${x} power ${y} is ${result}`
+        }
+
+        function Result(x,y){
+
+            var p=x;
+            var b=y;
+            while(b>1){ 
+            var p = p*x;
+            b--;
+            }
+            return p;
+           
+        }
+
+        function Count(){
+
+            let s = document.getElementById("s").value;
+
+            let n= sp(s);
+            document.getElementById("c").innerHTML = `Number of words in string are ${n}`
+        }
+		
+        function sp(s){
+
+            let o= s.split(" ");
+            let n= o.length;
+            console.log(o);
+            console.log(n);
+            return n
+        }
+		</script>
+		 
+	</body>
+</html>
