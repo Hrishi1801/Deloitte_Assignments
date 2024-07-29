@@ -1,0 +1,23 @@
+
+
+
+1.  Create a web page to read empno, ename, job, salary from the user (use input boxes). 		
+		Add the details to table by insert a new row with textbox values.
+
+2.  Create a web page to implement the following requirement :
+
+		a.  Use "Show Users" button to implement this task. Display the users data in table format by reading data from the below url:
+						  	https://reqres.in/api/users
+		b. Use DOM Manipulation and DOM Table methods to create new rows and cells. 
+
+		c.  Use "Remove User" button to remove the user based on user id.  Read User Id through textbox
+
+
+
+3.  Create a web page to display customer details based on the selected country.   
+
+	a.   Get the customer data from the below Urls:
+			https://www.w3schools.com/angular/customers.php
+			
+	b.    Display country names using Drop-Down list
+	c.     Result should display based on the selected country
