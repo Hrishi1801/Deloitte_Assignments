@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2>Friend Contact Manager</h2>
+    <input  id="nameInput" placeholder="Enter Name"><br><br>
+    <input id="phoneInput" placeholder="Enter Phone Number"><br><br>
+    <button onclick="addFriend()">Add Friend</button><br><br>
+    <button onclick="getPhoneNumber()">Get Phone Number</button><br><br>
+    <div id="div1"></div>
+
+    <script>
+        var frnd = new Map();
+
+        function addFriend() {
+            var name = document.getElementById('nameInput').value;
+            var phone = document.getElementById('phoneInput').value;
+            if (name && phone) {
+                frnd.set(name, phone);
+                document.getElementById('div1').innerText = 'Friend ' + name + ' added successfully.';
+                document.getElementById('nameInput').value = '';
+                document.getElementById('phoneInput').value = '';
+            } else {
+                document.getElementById('div1').innerText = 'Please enter both name and phone number.';
+            }
+        }
+
+        function getPhoneNumber() {
+            var name = document.getElementById('nameInput').value;
+            if (name && frnd.has(name)) {
+                var phone = frnd.get(name);
+                document.getElementById('div1').innerText = 'Phone Number of ' + name + ' is ' + phone + '.';
+            } else {
+                document.getElementById('div1').innerText = 'Name not found or missing input.';
+            }
+        }
+    </script>
+</body>
+</html>

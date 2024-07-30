@@ -1,0 +1,71 @@
+<html>
+<head></head>
+<body>
+<h3> JavaScript 6 (ES6)  -  Object Oriented Programming  </h3>
+	<hr/>
+<input type="button"  onclick="fn_button1Click()"  value="Get Data" />
+ <div id="div1"></div>
+	<script>	
+		class  BankAccount
+		{
+            AccNumber=1;
+            Name= "Hrishi";
+            City="Mumbai"; 
+            Email= "H@gmail.com";
+            PhoneNumber= 99;
+
+			   constructor(AccNumber,Name)
+			   {
+
+					this.AccNumber  = AccNumber;
+					this.Name  = Name;
+			   }
+	   }
+		
+		
+		class FDAccount  extends   BankAccount
+		{
+            FDAmount=5000;
+            InterestRate= 5;
+            Duration =5;
+
+				constructor(AccNumber, Name, FDAmount, InterestRate=8.5, Duration=12)
+			   {
+					super(AccNumber, Name);	//  invokes parent class constructor
+					this.FDAmount  = FDAmount;
+					this.InterestRate =  InterestRate;
+                    this.Duration  = Duration;
+					
+			   }
+			   
+			   showDetails()
+			   {
+                let divobj= document.getElementById("div1");
+                let str= `AccNumber :  ${this.AccNumber}, Name : ${this.Name}, City : ${this.City}, Email : ${this.Email},PhoneNumber: ${this.PhoneNumber} <br>
+                FDAmount :  ${this.FDAmount}, InterestRate: ${this.InterestRate}, Duration : ${this.Duration}`;
+                console.log(str);
+				
+                divobj.innerHTML=str;
+			   }
+		}
+		  
+				
+		function fn_button1Click()
+		{
+		   var bank = new FDAccount(10,"hrishikesh",7000);
+		   bank.showDetails();
+		}
+		
+		
+		
+	
+	</script>	 
+	
+	
+</body>
+</html>
+
+
+
+
+

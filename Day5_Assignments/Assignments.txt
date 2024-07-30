@@ -1,0 +1,44 @@
+Assignments 
+~~~~~~~~~~~~ 
+1.  Implement the following requirement using object-oriented concepts in javascript:
+
+		a.   Create a class called  "BankAccount" with following details :
+					AccNumber, Name, City, Email, PhoneNumber
+					
+		b.    Create a constructor with AccNumber, Name as parameters
+					
+		c.   Create a class called  "FDAccount" that inherits the  BankAccount class and the following details :
+						--> FDAmount, InterestRate, Duration : (In Months)
+						
+		d.  Create  a constructor with AccNumber, Name, FDAmount, InterestRate, Duration 
+
+		Hint : Default InterestRate = 8.5,  Duration =  12 (months)
+		
+		e.     Create object and provide required details in the constructor  and finally all the details on the web page in div tag when the user click the button.
+
+
+2.  Create a web  page  to implement the following requirement:  (Refer the Image)
+		a.   Read Friend's Name and Phone Number from the user
+		b.  Button:  "Add Friend" --  to store the details  in Map() collection 
+		c.  Button  :"Get Phone Number"  ---  Find the phone number based on the Name.  
+
+3.  What is setInterval()  and setTimeout() methods in JavaScript?
+
+he window object allows execution of code at specified time intervals.
+
+These time intervals are called timing events.
+
+The two key methods to use with JavaScript are:
+
+setTimeout(function, milliseconds)
+Executes a function, after waiting a specified number of milliseconds.
+
+setInterval(function, milliseconds)
+Same as setTimeout(), but repeats the execution of the function continuously.
+
+
+
+4.  What are promisees in JavaScript? Why do we use?  
+
+In JavaScript, a Promise is an object that will produce a single value some time in the future. If the promise is successful, it will produce a resolved value, but if something goes wrong then it will produce a reason why the promise failed. The possible outcomes here are similar to that of promises in real life.
+ 
