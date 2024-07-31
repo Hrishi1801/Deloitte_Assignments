@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment4</title>
+</head>
+ 
+<body>
+    <h1>Assignment4</h1>
+    <img src="office.jpg" id="adImage" alt="Advertisement" style="width:300px; height:auto;">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            const imagesArray = ["office.jpg", "headphones.jpg", "product.jpg", "shoes.jpg"];
+            const imgElement = $("#adImage").val()
+ 
+            function changeImage() {
+                const randomIndex = Math.floor(Math.random() * (imagesArray.length));
+                $("#adImage").attr("src", imagesArray[randomIndex]);
+            }
+ 
+            setInterval(changeImage, 2000);
+        });
+ 
+    </script>
+</body>
+ 
+</html>
