@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment4</title>
+</head>
+ 
+<body>
+    <h1>Assignment4</h1>
+    <img src="office.jpg" id="adImage" alt="Advertisement" style="width:300px; height:auto;">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const imagesArray = ["office.jpg", "headphones.jpg", "product.jpg", "shoes.jpg"];
+            const imgElement = document.getElementById('adImage');
+ 
+            // Function to change the image
+            function changeImage() {
+                const randomIndex = Math.floor(Math.random() * (imagesArray.length));
+                imgElement.src = imagesArray[randomIndex];
+            }
+ 
+            //  change image every 2 seconds
+            setInterval(changeImage, 2000);
+        });
+ 
+    </script>
+</body>
+ 
+</html>

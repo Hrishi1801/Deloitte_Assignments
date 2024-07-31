@@ -1,0 +1,78 @@
+Assignments
+~~~~~~~~~~~
+
+1.   Create a web  page  to implement the following requirement:
+		 a. Create a promise that will generate a random number between 1 to 50
+		 b. If the number is 6 multiple,  resolve the send that number
+		 b. Else, reject with error message.
+		 
+2.  Create a web  page  to implement the following requirement:
+		a.  Add a button to Show data. 
+		b.  Write the code to get the data from the following url using fetch() 
+					https://reqres.in/api/users
+		c.  Display the data in table format
+		
+		
+3.  Create a web page to perform the following operations using jquery:	
+		a.  Get product details from user:		Product Name, Unit Price, Quantity
+		b.  Display total amount based on price and qty
+		c.   Apply the following discounts:
+				-->  qty is greater than 10   ----  5% 
+				-->  qty is greater than 20   ----  10% 
+				-->  qty is greater than 30   ----  15% 
+				
+		d.  Alert the user if negative number enter for qty
+		e.  Display the total amount with two decimal digit format (Eg: INR. 2500.00)
+		
+4.  Create a web page to generate ads at runtime. Loading images based on the time interval. Use random concept for this.
+
+		a.   Take array of image names 
+					let imagesArray = ["Image1.jpg", "Image2.jpg", ......]
+		b.   Get the image randomly every to 2 sec. and display on the screen. 
+
+	Hint :  Use javascript Math library to generate random numbers. 
+	
+
+5. Find some details about following: 
+			a.   How to hide html element using JavaScript?  jQuery? 
+				
+				JS:
+				function myFunction() {
+  					 x = document.getElementById("myDIV");
+  					 if (x.style.display === "none") {
+    						x.style.display = "block";
+  					} else {
+    						x.style.display = "none";
+  					}
+					}
+
+				Jquery:
+				$("button").click(function(){
+ 					 $("p").hide();
+				});
+
+
+			b.  How to select all textboxes using jQuery selector?  
+						Hint : Without using classname / id
+
+				<script>  
+        				$(document).ready(function () {  
+            				$("#btnClick").click(function () {  
+  
+                			$("input[type='text']").each(function () {  
+  
+                    			alert($(this).val());  
+                			})  
+            				});  
+  
+        				});  
+ 				</script>  
+
+			b.  What is the difference between   "this" and  $(this) in jquery programming?
+
+				This is the DOM object, whereas $(this) is the jQuery wrapper around same. When using this , you can call DOM methods on it, but not jQuery methods. When using $(this) , you can call jQuery methods on it, but not DOM methods
+
+-----------------------------------------------------------------------------------------------------
+
+
+ 

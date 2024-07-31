@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment3</title>
+</head>
+
+<body>
+
+    <fieldset>
+        <legend>Product Detail</legend>
+        Product Name : <input type="text" id="t1" />
+        <br /><br />
+        Unit Price : <input type="number" id="t2" />
+        <br /><br />
+        Quantity : <input type="number" id="t3" />
+
+        <br /><br />
+        <input type="button" onclick="buttonClick()" value="Calculate" />
+    
+        <p id="p1"></p>
+    </fieldset>
+  
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script>
+
+        function buttonClick() {
+
+            $(document).ready(function()
+		{
+            let pd = parseInt( $("#t1").val() );		 
+			let u = parseInt( $("#t2").val() );	
+            let q = parseInt( $("#t3").val() );			 
+			let sum = 0;
+
+            
+            if(q<0){
+                alert("Do you want to continue?");
+            }
+            
+			if(q>10 && q<=20)
+			{
+                let d= q*u*5/100;
+				sum= (q*u)-d;
+			}
+			else if(q>20 && q<=30)
+			{   
+                let d= q*u*10/100;
+				sum= (q*u)-d;
+
+			}
+            else if(q>30)
+            {
+                let d= q*u*15/100;
+				sum= (q*u)-d;
+            }
+            else
+            {
+                sum= q*u;
+            }
+
+            sum= sum.toFixed(2);
+            $("#p1").html("Result : " + sum);
+        });
+    }
+
+    
+
+    </script>
+
+</body>
+
+</html>
