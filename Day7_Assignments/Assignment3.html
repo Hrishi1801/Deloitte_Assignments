@@ -1,0 +1,100 @@
+<!-- Create HTML Page to display Hello World message by using jQuery -->
+<html>
+ <head> 
+ </head>
+ <body>
+	<h2>Deloitte Employee Management System</h2>
+	 
+	<form id="employeeForm">
+		<label for="empno">Employee Number:</label>
+		<input type="text" id="empno" name="empno">
+	 
+		<label for="ename">Employee Name:</label>
+		<input type="text" id="ename" name="ename">
+	 
+		<label for="job">Job:</label>
+		<select id="job" name="job">
+			<option value="Analyst">Analyst</option>
+			<option value="Senior Analyst">Senior Analyst</option>
+			<option value="Manager">Manager</option>
+			<option value="Senior Manager">Senior Manager</option>
+		</select><br>
+		<label for="salary">Salary:</label>
+		<input type="text" id="salary" name="salary">
+	 <br>
+		<label for="deptno">Department Number:</label>
+		<input type="text" id="deptno" name="deptno">
+	 <br>
+		<button type="button" id="addEmployee">Add Employee</button>
+	 
+		<div class="error"></div>
+	</form>
+	 
+	<table id="employeeTable"  border="2" width="400px">
+		<thead>
+			<tr>
+				<th>Employee Number</th>
+				<th>Name</th>
+				<th>Job</th>
+				<th>Salary</th>
+				<th>Dept Number</th>
+			</tr>
+		</thead>
+		 <tbody>  <!--add rows dynamically -->
+		</tbody>
+	</table>
+	 
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		$('#addEmployee').click(function() {
+			var empno = $('#empno').val();
+			var ename = $('#ename').val();
+			var job = $('#job').val();
+			var salary = $('#salary').val();
+			var deptno = $('#deptno').val();
+			var isValid = true;
+			var errorMessage = "";
+	 
+			// checking for duplicate employee number
+			$('#employeeTable tbody tr').each(function() {
+				var existingEmpNo = $(this).find('td:first').text();
+				if (existingEmpNo === empno) {
+					isValid = false;
+					errorMessage = "Duplicate Employee Number found!";
+				}
+			});
+	 
+			if (isValid) {
+				// Creating new row and append in sorted order
+				var newRow = $('<tr>').append(
+					$('<td>').text(empno),
+					$('<td>').text(ename),
+					$('<td>').text(job),
+					$('<td>').text(salary),
+					$('<td>').text(deptno)
+				);
+	 
+				// sort
+				var added = false;
+				$('#employeeTable tbody tr').each(function() {
+					var currentEmpNo = $(this).find('td:first').text();
+					if (parseInt(empno) < parseInt(currentEmpNo)) {
+						$(this).before(newRow);
+						added = true;
+						return false; // break the loop
+					}
+				});
+	 
+				if (!added) {
+					$('#employeeTable tbody').append(newRow);
+				}
+			} else {
+				$('.error').text(errorMessage);
+			}
+		});
+	});
+	</script>
+	</body>
+</html>
+

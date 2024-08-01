@@ -1,0 +1,51 @@
+Assignment-1
+~~~~~~~~~~~~
+	 
+1.   Update my example (WebPage3_DOM_Traversing.html) for the following requirement:
+	a.  Add "Remove"  hyperlink in the second column for each row
+	b.  Write the code to delete the selected row when the user click "Remove" link.
+ 		
+2.   Redesign the 2nd example (WebPage2_DOM_Traversing.html ) for the following requirement:
+		a.   Last Row and First row same colors -- no changes 
+		b.   Apply light green color to remaining all rows.  
+		c.   Apply light pink only the rows whose "Units In Stock"  is zero.   
+
+3.   Create a web page to implement the following requirements
+				a.  display following employee details in the table 
+							empno, ename, job, salary, deptno 
+				b.   "Add Employee"  button :  add new employee details to the table  
+				c.    Read Employee details from user using textboxes 
+						(Hint : Job should be read using drop-downlist)
+				d.   Consider the below condition while add the new employee details 
+						-- it should be sorted based on employee id 
+						--  identify the position where would be new employee details placed in the table 
+				e.   if duplicate employee id, do not add and throw error message. 
+						
+		
+4. Find the answers for the following questions: 
+	a. What is the eval() method?
+
+eval() is a function property of the global object. The argument of the eval() function is a string. It will evaluate the source string as a script body, which means both statements and expressions are allowed. It returns the completion value of the code.
+
+
+	b. What is the purpose of  prev() and next()  methods in jQuery?  
+
+The prev() method returns the previous sibling element of the selected element
+
+The next() method returns the next sibling element of the selected element
+
+
+	c. How to delete all rows in a table except first row?
+
+ <script> 
+        $(document).ready(function () { 
+            $('#btn').click(function () { 
+                $("#rTable").find("tr:gt(0)").remove(); 
+            }); 
+        }); 
+    </script> 
+
+OR
+
+$('someTableSelector').children( 'tr:not(:first)' ).remove();	  
+ 
