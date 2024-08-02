@@ -1,0 +1,41 @@
+<html>
+ <head> 
+ </head>
+ <body>
+	<h3> jQuery Programming -- String Handling </h3>
+	<hr />
+	
+	Enter a string :   <input   id="t1"  />   <br/><br/> 
+	<input type="button"  id="b1"  value="Get data"   />
+	<ul  id="u"></ul>
+	<hr/>
+	
+			
+	<script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	
+	<script>
+	$(document).ready(function(){ 
+	
+		$("#b1").click(function()
+		{
+				let  arr  =  $("#t1").val().split(",");
+                
+                console.log(arr);
+                $.each(arr, function (index, value) { 
+
+                    $("#u").append(`<li> ${value} </li>`);
+
+				
+			});
+				
+		});
+		
+    });
+	
+	
+	</script>
+	
+ </body>
+</html>
+
+ 

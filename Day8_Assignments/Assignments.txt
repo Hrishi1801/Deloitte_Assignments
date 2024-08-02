@@ -1,0 +1,17 @@
+Assignment-1
+~~~~~~~~~~~~
+1. Create a web page to apply  Bold, Underline & Italic styles using jQuery.
+		Hint : Refer the image for sample output
+		
+2. Create a web page to read csv string from the user and display the values of csv string in list format (Refer the image).  Final result should be display in uppercase format.  
+
+3. Create a web page to implement the following validations using regular expressions in jQuery:
+		a.  Person Name  :   should have allow 10 characters (Only Alphabets)
+		b.  Person Contact Number  :    exact 10 numbers
+		c.  Vehicle Number  :   AA11AA1111   (Sample Format) 
+		d.  City Name  :   Allows only capital letters 
+
+Reference Urls:
+https://www.w3schools.com/jsref/jsref_obj_regexp.asp
+
+

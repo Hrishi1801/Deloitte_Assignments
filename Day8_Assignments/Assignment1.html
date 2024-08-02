@@ -1,0 +1,56 @@
+<!-- Create HTML Page to display Hello World message by using jQuery -->
+<html>
+ <head> 
+ </head>
+ <body>
+	<h3> jQuery Programming -   Effects </h3>
+	<hr/>
+	
+	 <input type="button" id="b" value="B" />
+	 <input type="button" id="u" value="U" />
+	 <input type="button" id="i" value="I" />
+	 <br/>    <br/>
+
+	 <div  id="div1" style="border:1px solid gray; text-align: center; width:305px; height : 205px; padding : 5px;">
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo recusandae asperiores dolorum eius nobis saepe doloribus tempore corporis alias ipsam nesciunt reiciendis rerum autem, similique quasi doloremque quidem modi? Recusandae?  
+	 </div>
+	
+		
+	 
+	<script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	
+	<script>
+	
+		$(document).ready(function()
+		{ 
+
+            $("input[type='button']").focus(function(){
+					  $(this).css({"background-color":"blue", "color":"red"});
+				});
+
+                $("input[type='button']").blur(function(){
+					$(this).css({"background-color":"white", "color":"black"});
+				});
+                
+				$("#b").click(function()  
+				{ 
+				$("#div1").css("font-weight","bold");
+                });
+
+                $("#u").click(function()  
+				{ 
+				$("#div1").css("text-decoration","underline");
+                });
+
+                $("#i").click(function()  
+				{ 
+				$("#div1").css("font-style","italic");
+                });
+		});
+		
+				
+	</script>
+	
+ </body>
+</html>
+
